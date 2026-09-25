@@ -1,0 +1,9 @@
+age
+is_male
+is_urban
+sbp1
+dbp1
+hypertension
+arm_circ
+education
+hv270

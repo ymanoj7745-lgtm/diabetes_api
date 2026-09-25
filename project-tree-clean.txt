@@ -1,0 +1,83 @@
+﻿[DIR ] app
+[DIR ] app\hf_space
+[DIR ] data
+[DIR ] data\interim
+[DIR ] data\processed
+[DIR ] data\raw
+[DIR ] data\raw\household_extract
+[DIR ] data\raw\women_extract
+[DIR ] models
+[DIR ] notebooks
+[DIR ] reports
+[DIR ] reports\figures
+[DIR ] src
+[DIR ] tests
+[FILE]      0.0 KB  app\__init__.py
+[FILE]      0.0 KB  models\threshold.txt
+[FILE]      0.0 KB  project-tree-clean.txt
+[FILE]      0.0 KB  src\__init__.py
+[FILE]      0.1 KB  .dockerignore
+[FILE]      0.1 KB  models\features.txt
+[FILE]      0.2 KB  .gitignore
+[FILE]      0.3 KB  docker-compose.yml
+[FILE]      0.3 KB  reports\figures\feature_importance.csv
+[FILE]      0.3 KB  requirements.txt
+[FILE]      0.4 KB  Dockerfile
+[FILE]      0.8 KB  tests\extract_biomarkers.py
+[FILE]      0.9 KB  models\imputer.pkl
+[FILE]      1.1 KB  models\scaler.pkl
+[FILE]      1.3 KB  tests\find_member_roster.py
+[FILE]      1.4 KB  src\load.py
+[FILE]      1.5 KB  tests\find_glucose2.py
+[FILE]      1.9 KB  README.md
+[FILE]      1.9 KB  tests\find_roster.py
+[FILE]      2.1 KB  tests\test_household.py
+[FILE]      2.2 KB  tests\find_glucose.py
+[FILE]      2.4 KB  tests\test_load.py
+[FILE]      2.7 KB  app\hf_space\app.py
+[FILE]      3.1 KB  src\features.py
+[FILE]      3.7 KB  notebooks\04_feature_engineering.ipynb
+[FILE]      4.0 KB  src\config.py
+[FILE]      4.0 KB  src\train.py
+[FILE]      4.1 KB  notebooks\02_clean_merge.ipynb
+[FILE]      4.2 KB  tests\build_dataset2.py
+[FILE]      4.3 KB  notebooks\07_state_aggregation.ipynb
+[FILE]      4.4 KB  app\main.py
+[FILE]      4.6 KB  notebooks\01_explore_variables.ipynb
+[FILE]      4.6 KB  notebooks\05_modeling.ipynb
+[FILE]      4.8 KB  tests\train_models.py
+[FILE]      5.0 KB  tests\build.dataset.py
+[FILE]      5.2 KB  notebooks\03_eda.ipynb
+[FILE]      5.3 KB  notebooks\06_shap_analysis.ipynb
+[FILE]      5.3 KB  tests\build_dataset3.py
+[FILE]      5.6 KB  tests\train_models2.py
+[FILE]      6.1 KB  tests\shap_analysis.py
+[FILE]      6.5 KB  requirements-lock.txt
+[FILE]      6.8 KB  tests\men_columns.txt
+[FILE]     36.8 KB  reports\figures\shap_bar.png
+[FILE]     52.2 KB  reports\figures\shap_dependence_sbp1.png
+[FILE]     67.1 KB  reports\figures\shap_waterfall_high_risk.png
+[FILE]     79.5 KB  reports\figures\shap_dependence_arm_circ.png
+[FILE]     83.2 KB  data\raw\women_extract\IAIR7EFL.DOCX
+[FILE]     85.6 KB  reports\figures\shap_dependence_dbp1.png
+[FILE]    114.4 KB  reports\figures\shap_summary.png
+[FILE]    138.9 KB  reports\figures\shap_dependence_age.png
+[FILE]    200.7 KB  data\raw\household_extract\IAHR7EFL.MAP
+[FILE]    221.7 KB  data\raw\women_extract\IAIR7EFL.DCT
+[FILE]    246.1 KB  data\raw\household_extract\IAHR7EFL.DCT
+[FILE]    284.9 KB  tests\household_columns.txt
+[FILE]    630.7 KB  data\raw\household_extract\IAHR7EFL.DO
+[FILE]    728.7 KB  data\raw\women_extract\IAIR7EFL.MAP
+[FILE]    742.7 KB  data\raw\women_extract\IAIR7EFL.DO
+[FILE]  4,860.1 KB  tree.txt
+[FILE]  4,865.4 KB  inventory.txt
+[FILE] 12,143.9 KB  data\processed\household_long.parquet
+[FILE] 14,844.2 KB  data\processed\household_full.parquet
+[FILE] 23,61,050.2 KB  data\raw\IABR7EFL.DTA
+[FILE] 50,74,612.4 KB  data\raw\women_extract\IAIR7EFL.DTA
+[FILE] 50,90,942.9 KB  data\raw\household_extract\IAHR7EFL.DTA
+[FILE] 80,723.0 KB  models\best_model.pkl
+[FILE] 92,878.6 KB  data\raw\women_extract\IAIR7EFL.FRQ
+[FILE] 92,878.6 KB  data\raw\women_extract\IAIR7EFL.FRW
+[FILE] 97,543.5 KB  data\raw\household_extract\IAHR7EFL.FRQ
+[FILE] 97,543.5 KB  data\raw\household_extract\IAHR7EFL.FRW

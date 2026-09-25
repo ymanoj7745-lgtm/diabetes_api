@@ -1,0 +1,41 @@
+# Data (never commit — too large)
+data/raw/
+data/interim/
+data/processed/
+*.dta
+*.DTA
+*.zip
+
+# Environment
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Reports (large PDFs)
+reports/*.pdf
+reports/figures/
+tree.txt
+
+# Notebooks
+notebooks/
+
+# Tests (not needed in production)
+tests/
+
+# Old backups
+*.bak
+*.bak.py
+main_antigravity.py.bak
+requirements-full.txt
+
+# ✅ KEEP models/*.pkl — Render needs them!
