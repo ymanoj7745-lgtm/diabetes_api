@@ -1,64 +1,109 @@
-# 🇮🇳 Diabetes Risk Prediction — NFHS-5
+<!--
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🧠  Diabetes Risk API                                          ║
+║   Interpretable Diabetes Risk Prediction                         ║
+║   Trained on NFHS-5 (2019-21) — 1.8M records                    ║
+║                                                                  ║
+║   Stack: FastAPI · scikit-learn · SHAP · Docker · Render        ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+-->
 
-End-to-end ML pipeline to predict diabetes risk from India's National Family Health Survey (NFHS-5) data.
+<div align="center">
 
-## Project Structure
+<img src="https://capsule-render.vercel.app/api?type=waving&color=009688&height=200&section=header&text=Diabetes%20Risk%20API&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=Interpretable%20ML%20for%20Diabetes%20Screening%20in%20India&descAlignY=60&descSize=17" width="100%"/>
 
-```
-diabetes-nfhs5/
-├── data/
-│   ├── raw/          # Original .DTA files (not committed)
-│   ├── interim/      # Cleaned intermediate files
-│   └── processed/    # Final feature matrices
-├── notebooks/        # Jupyter notebooks (exploration, EDA, modeling)
-├── src/              # Source code (config, loading, features, training)
-├── models/           # Trained model artifacts (.pkl)
-├── app/              # FastAPI backend
-│   └── hf_space/     # Hugging Face Spaces demo
-├── reports/
-│   └── figures/      # Generated plots and SHAP visualizations
-└── tests/            # Unit tests
-```
+### 🧠 FastAPI backend serving an explainable diabetes risk model trained on 1.8M NFHS-5 records.
 
-## Quick Start
+Every prediction comes with **SHAP explanations** — showing exactly *which* factors drove the risk score and *by how much*.
 
-```bash
-# 1. Set up environment
-python -m venv .venv
-.venv\Scripts\activate        # Windows
-pip install -r requirements.txt
+<br/>
 
-# 2. Place NFHS-5 .DTA files in data/raw/
+[![📖 API Docs](https://img.shields.io/badge/📖_API_DOCS-Live-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://diabetes-api-r8tu.onrender.com/docs)
+[![🚀 Frontend](https://img.shields.io/badge/🚀_FRONTEND-Live-DC2626?style=for-the-badge&logo=vercel&logoColor=white)](https://diabetes-frontend-gamma.vercel.app)
+[![⭐ Star](https://img.shields.io/github/stars/ymanoj7745-lgtm/diabetes_api?style=for-the-badge&logo=github&color=yellow)](https://github.com/ymanoj7745-lgtm/diabetes_api/stargazers)
 
-# 3. Run exploration notebook
-jupyter notebook notebooks/01_explore_variables.ipynb
+<br/>
 
-# 4. Train models
-python -m src.train
+[![Python](https://img.shields.io/badge/Python_3.11-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
+[![SHAP](https://img.shields.io/badge/SHAP-Explainable_AI-8A2BE2?style=flat-square)](https://github.com/slundberg/shap)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com)
+[![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://render.com)
 
-# 5. Launch API
-uvicorn app.main:app --reload --port 8000
-```
+[![License: MIT](https://img.shields.io/badge/License-MIT-success?style=flat-square)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/ymanoj7745-lgtm/diabetes_api/pulls)
+[![Made in India](https://img.shields.io/badge/Made_in-India_🇮🇳-FF9933?style=flat-square)](#)
 
-## Data Source
+</div>
 
-- **NFHS-5 (2019–21)**: DHS Program microdata
-- Files: `IAHR7EDT.DTA` (Household), `IAIR7EDT.DTA` (Women), `IAMR7EDT.DTA` (Men), `IAGE7AFL.DTA` (GPS)
+---
 
-## API Endpoints
+<div align="center">
 
-| Endpoint     | Method | Description                    |
-|-------------|--------|--------------------------------|
-| `/`         | GET    | Service info                   |
-| `/health`   | GET    | Health check                   |
-| `/predict`  | POST   | Predict diabetes risk + SHAP   |
+### ⚡ **Try it now — interactive API docs**
 
-## Expected Model Performance
+> **[👉 Open Swagger UI](https://diabetes-api-r8tu.onrender.com/docs)**
 
-- **Target**: AUC ≥ 0.75
-- **Benchmark**: ~13.5% prevalence (Women), ~15.6% (Men)
-- **Top features**: Age, Hypertension, BMI, Wealth Index, Urban
+</div>
 
-## License
+---
 
-For research and educational purposes only. NFHS-5 data subject to DHS Program terms.
+## 📖 Table of Contents
+
+<details open>
+<summary><b>Click to expand</b></summary>
+
+- [🎯 Overview](#-overview)
+- [🔌 API Endpoints](#-api-endpoints)
+- [🧠 Model Card](#-model-card)
+- [📊 Performance](#-performance)
+- [🏗️ Architecture](#️-architecture)
+- [🚀 Quick Start](#-quick-start)
+- [🐳 Docker](#-docker)
+- [📡 Usage Examples](#-usage-examples)
+- [📂 Project Structure](#-project-structure)
+- [☁️ Deployment](#️-deployment)
+- [🧪 Testing](#-testing)
+- [🗺️ Roadmap](#️-roadmap)
+- [🤝 Contributing](#-contributing)
+- [⚠️ Disclaimer](#️-disclaimer)
+- [📜 License](#-license)
+- [🙏 Acknowledgements](#-acknowledgements)
+
+</details>
+
+---
+
+## 🎯 Overview
+
+This is the **backend API** for [DiabetesRisk.ai](https://diabetes-frontend-gamma.vercel.app) — an open-source diabetes screening tool for India.
+
+The API:
+- 🩺 Predicts diabetes risk from **8 easily-measurable vitals** (no blood test needed)
+- 🔍 Returns **SHAP explanations** for every prediction
+- 📊 Accepts **single** or **batch CSV** predictions (up to 10,000 rows)
+- ⚡ Responds in **~200ms** (after cold start)
+- 🐳 Ships as a **Docker container** deployable anywhere
+
+**Live URL:** [https://diabetes-api-r8tu.onrender.com](https://diabetes-api-r8tu.onrender.com)
+
+---
+
+## 🔌 API Endpoints
+
+### `GET /`
+
+Root — service info.
+
+```json
+{
+  "service": "Diabetes Risk API",
+  "version": "1.1.0",
+  "status": "ok",
+  "features": ["age", "is_male", "is_urban", "sbp1", "dbp1", "hypertension", "arm_circ", "education", "hv270"],
+  "threshold": 0.5991014555820623,
+  "docs": "/docs"
+}
